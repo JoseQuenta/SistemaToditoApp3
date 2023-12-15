@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaToditoApp3.Android", "SistemaToditoApp3.Android\SistemaToditoApp3.Android.csproj", "{FDDBFDC5-C54A-4B4C-BD38-ABFE2CD68CAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaToditoApp3", "SistemaToditoApp3\SistemaToditoApp3.csproj", "{2903F943-2AF5-41F8-B252-14E852E44AC6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FDDBFDC5-C54A-4B4C-BD38-ABFE2CD68CAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDDBFDC5-C54A-4B4C-BD38-ABFE2CD68CAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDDBFDC5-C54A-4B4C-BD38-ABFE2CD68CAC}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{FDDBFDC5-C54A-4B4C-BD38-ABFE2CD68CAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDDBFDC5-C54A-4B4C-BD38-ABFE2CD68CAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDDBFDC5-C54A-4B4C-BD38-ABFE2CD68CAC}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{2903F943-2AF5-41F8-B252-14E852E44AC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2903F943-2AF5-41F8-B252-14E852E44AC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2903F943-2AF5-41F8-B252-14E852E44AC6}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{2903F943-2AF5-41F8-B252-14E852E44AC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2903F943-2AF5-41F8-B252-14E852E44AC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2903F943-2AF5-41F8-B252-14E852E44AC6}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {47BDDE15-9808-4385-A04B-931B08552CA6}
+	EndGlobalSection
+EndGlobal

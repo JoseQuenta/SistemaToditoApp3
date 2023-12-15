@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:viewmodel="clr-namespace:SistemaToditoApp3.Viewmodel"
+             x:Class="SistemaToditoApp3.Views.ComprasSimple">
+
+    <ContentPage.BindingContext>
+        <viewmodel:MainViewModel />
+    </ContentPage.BindingContext>
+
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="nombreUsuario"/>
+        <ToolbarItem Text="Cerrar Sesion" Command="{Binding CerrarSesion.CerrarSesionCommand}" />
+    </ContentPage.ToolbarItems>
+
+    <StackLayout>
+        <!-- Sección 1: Datos de la Factura -->
+        <!--
+        <Entry Placeholder="Captura de Factura"/>
+        <Label Text="Número de Serie"/>
+        <Entry IsVisible="true" />
+        <Label Text="Número Correlativo"/>
+        <Entry IsVisible="true" />
+        <DatePicker x:Name="datePicker"/>
+        <Label Text="Compras" FontSize="Large" HorizontalOptions="Center" />
+
+        <CollectionView ItemsSource="{Binding ComprasSimple.Productos}" SelectionMode="Single">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Label Grid.Row="0" Text="{Binding IdProducto}" IsVisible="false"/>
+                        <Label Grid.Row="1" Text="{Binding oCategoria.Descripcion}"/>
+                        <Label Grid.Row="2" Text="{Binding Codigo}"/>
+
+                        <Label Grid.Row="3" FontAttributes="Bold" FontSize="Title">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="{Binding Nombre}" />
+                                    <Span Text=" " />
+                                    <Span Text="{Binding Marca}" />
+                                    <Span Text=" " />
+                                    <Span Text="{Binding Descripcion}" />
+                                    <Span Text=" " />
+                                    <Span Text="{Binding Tamaño}" />
+                                    <Span Text=" " />
+                                    <Span Text="{Binding UnidadMedida}" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>-->
+
+        <!-- Sección 2: Agregar Producto por Código de Barras -->
+        <SearchBar Placeholder="Escanear o Digitar el Codigo de Barras" 
+                   Text="{Binding ComprasSimple.ValorBusqueda, Mode=TwoWay}" 
+                   SearchCommand="{Binding ComprasSimple.AgregarProductoCommand}" 
+                   Keyboard="Numeric"
+                   x:Name="ValorBusqueda2"
+                   
+                   />
+
+        <!-- Sección 3: Productos Agregados con ScrollView -->
+
+
+        
+
+        <CollectionView ItemsSource="{Binding ComprasSimple.ProductosSeleccionados}" 
+                        SelectionMode="Single" 
+                        SelectionChanged="CollectionView_SelectionChanged"
+                        >
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Label Grid.Row="0" Text="{Binding oProducto.IdProducto}" IsVisible="false"/>
+                        <Label>
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="{Binding oProducto.Codigo, StringFormat='Cod.: {0}'}" />
+                                    <Span Text=" - " />
+                                    <Span Text="{Binding oProducto.oCategoria.Descripcion, StringFormat='Categoria: {0}'}" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+
+
+                        <Label Grid.Row="1"  FontAttributes="Bold" FontSize="Title">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="{Binding oProducto.Nombre}" />
+                                    <Span Text=" " />
+                                    <Span Text="{Binding oProducto.Marca}" />
+                                    <Span Text=" " />
+                                    <Span Text="{Binding oProducto.Descripcion}" />
+                                    <Span Text=" " />
+                                    <Span Text="{Binding oProducto.Tamaño}" />
+                                    <Span Text=" " />
+                                    <Span Text="{Binding oProducto.UnidadMedida}" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                         <!--Display the quantity--> 
+                        <Label Grid.Row="2" Text="{Binding Cantidad, StringFormat='Cantidad: {0}'}" FontSize="Title" HorizontalTextAlignment="End"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+
+
+
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" >
+            <Button Text="Guardar" Command="{Binding ValidarCommand}" HorizontalOptions="FillAndExpand" />
+            <Button Text="Cancelar" Command="{Binding CancelarCommand}" HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

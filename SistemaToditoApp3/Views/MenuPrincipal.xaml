@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SistemaToditoApp3.Views.MenuPrincipal">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="nombreUsuario"/>
+        <ToolbarItem Text="Cerrar Sesion" Command="{Binding CerrarSesionCommand}" />
+    </ContentPage.ToolbarItems>
+
+    <StackLayout>
+
+
+        <Button Text="Compras"  Clicked="Ingresos_Clicked"/>
+        <Button Text="Transferencias"  Clicked="Transferencias_Clicked"/>
+        <!--<Button Text="Producto" Clicked="VerProducto_Clicked"/>-->
+        <Button Text="Compras Rapidas" Clicked="ComprasRapidas_Clicked"/>
+        <Button Text="MDProductos" Clicked="MDProductos_Clicked"/>
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SistemaToditoApp3.Views.Login"
+             
+             BindingContext="{Binding VM_Login}"
+             >
+
+    <StackLayout>
+        <Image Source="logo.png" HorizontalOptions="Center" />
+        <Label Text="Usuario" FontSize="Large" HorizontalOptions="Center" />
+        <Entry Text="{Binding Documento}" Placeholder="Documento" HorizontalOptions="FillAndExpand" ReturnType="Next" Keyboard="Telephone"/>
+        <Label Text="Contraseña" FontSize="Large" HorizontalOptions="Center" />
+        <Entry Text="{Binding Clave}" Placeholder="Contraseña" IsPassword="True" HorizontalOptions="FillAndExpand" ReturnType="Go" Keyboard="Numeric"/>
+        <Button Text="Ingresar" HorizontalOptions="Center" Command="{Binding LoginCommand}" />
+    </StackLayout>
+
+
+</ContentPage>

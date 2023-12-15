@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:viewmodel="clr-namespace:SistemaToditoApp3.Viewmodel"
+             x:Class="SistemaToditoApp3.Views.Modales.mdProducto">
+
+    <ContentPage.BindingContext>
+        <viewmodel:MainViewModel />
+    </ContentPage.BindingContext>
+
+
+    <ContentPage.Content>
+        <StackLayout>
+            <SearchBar Placeholder="Buscar Producto"
+                       Text="{Binding mdProducto.ValorBusqueda, Mode=TwoWay}"
+                       CancelButtonColor="Red"
+                       x:Name="searchBarProducto"/>
+
+            <CollectionView ItemsSource="{Binding mdProducto.ProductosFiltrados}" SelectionMode="Single">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <Label Grid.Row="0" Text="{Binding IdProducto}" IsVisible="false"/>
+                            <Label Grid.Row="1" Text="{Binding oCategoria.Descripcion}"/>
+                            <Label Grid.Row="2" Text="{Binding Codigo}"/>
+
+                            <Label Grid.Row="3" FontAttributes="Bold" FontSize="Title">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="{Binding Nombre}" />
+                                        <Span Text=" " />
+                                        <Span Text="{Binding Marca}" />
+                                        <Span Text=" " />
+                                        <Span Text="{Binding Descripcion}" />
+                                        <Span Text=" " />
+                                        <Span Text="{Binding Tamaño}" />
+                                        <Span Text=" " />
+                                        <Span Text="{Binding UnidadMedida}" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

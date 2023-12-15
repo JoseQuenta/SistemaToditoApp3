@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SistemaToditoApp3.Views.V_Producto">
+    <!--<ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="nombreUsuario"/>
+        <ToolbarItem Text="Cerrar Sesion" Command="{Binding CerrarSesionCommand}" />
+    </ContentPage.ToolbarItems>-->
+
+
+    <!--crear una interfaz que permita buscar un producto y mostrar su ubicacion, es decir puede estar en el almacen o en la tienda, y mostrar sus cantidades. ideas, como podemos implementarlo?-->
+    <StackLayout>
+        <Label Text="Producto" FontSize="Large" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+        <Label Text="Nombre" FontSize="Medium" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+        <Entry x:Name="txtNombre" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+        <Label Text="Cantidad" FontSize="Medium" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+        <Entry x:Name="txtCantidad" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+        <Label Text="Precio" FontSize="Medium" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+        <Entry x:Name="txtPrecio" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+        <Label Text="Ubicacion" FontSize="Medium" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+        <Entry x:Name="txtUbicacion" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+        <Button Text="Guardar"  HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+    </StackLayout>
+</ContentPage>

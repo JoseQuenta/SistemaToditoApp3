@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SistemaToditoApp3.Views.Modales.mdDetalle">
+
+
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Producto" />
+            <!--<Label x:Name="nombreProducto" />-->
+
+
+
+            <Label Text="Editar Cantidad" />
+            <Entry x:Name="CantidadEntry" Placeholder="Cantidad" Keyboard="Numeric" />
+            <Button Text="Confirmar" Clicked="Button_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

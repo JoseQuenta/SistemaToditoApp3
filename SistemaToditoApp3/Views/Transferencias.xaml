@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SistemaToditoApp3.Views.Transferencias">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="nombreUsuario"/>
+        <ToolbarItem Text="Cerrar Sesion" Command="{Binding CerrarSesionCommand}" />
+    </ContentPage.ToolbarItems>
+
+
+    <StackLayout>
+        <Label Text="Transferencia interna de Productos al Almacen" 
+          HorizontalOptions="Center"
+          VerticalOptions="CenterAndExpand" />
+
+        <DatePicker x:Name="datePicker" />
+
+        <Entry x:Name="productEntry" Placeholder="Nombre o Codigo de Barras" />
+
+        <Button Text="Buscar producto"  />
+        <!--Clicked="OnSearchClicked"-->
+
+        <Label Text="Cantidad" />
+
+        <StackLayout Orientation="Horizontal">
+            <Button Text="-"  />
+            <!--Clicked="OnDecrementClicked"-->
+            <Entry x:Name="quantityEntry" Placeholder="Cantidad" Keyboard="Numeric" />
+            <Button Text="+"  />
+            <!--Clicked="OnIncrementClicked"-->
+        </StackLayout>
+
+        <Label Text="Lugar origen"/>
+        <Picker x:Name="OrigenPicker" Title="Lugar destino">
+            <Picker.Items>
+                <x:String>Almacen</x:String>
+                <x:String>Local</x:String>
+            </Picker.Items>
+        </Picker>
+
+
+        <Label Text="Lugar destino"/>
+        <Picker x:Name="destinoPicker" Title="Lugar destino">
+            <Picker.Items>
+                <x:String>Almacen</x:String>
+                <x:String>Local</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Button Text="Agregar al Almacen"  />
+        <!--Clicked="OnAddToWarehouseClicked"-->
+
+
+        <!--button para guardar la lista de productos agregados al almacen-->
+        <Button Text="Confirmar"  />
+
+        <Button Text="Limpiar"  />
+
+
+    </StackLayout>
+
+
+</ContentPage>
